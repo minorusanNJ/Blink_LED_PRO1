@@ -1,5 +1,4 @@
 #include "system.h"
-#include "GPIO/gpio.h"
 #include "bsp.h"
 #include <stdio.h>
 //Git practice

@@ -1,5 +1,5 @@
-#ifndef __BSP_H__
-#define __BSP_H__
+#ifndef BSP_H
+#define BSP_H
 
 #include "bsp_led.h"
 

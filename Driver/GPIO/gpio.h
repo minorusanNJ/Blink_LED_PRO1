@@ -1,5 +1,5 @@
-#ifndef __GPIO_H__
-#define __GPIO_H__
+#ifndef GPIO_H
+#define GPIO_H
 
 #include "stm32f4xx.h"
 #include <stdint.h>
@@ -10,7 +10,7 @@ typedef enum
 	HIGH	=	1
 }gpio_pin_state_t;
 
-static void gpio_clock_enable(GPIO_TypeDef *GPIOx);
+void gpio_clock_enable(GPIO_TypeDef *GPIOx);
 
 void gpio_init_output(GPIO_TypeDef *GPIOx, uint8_t pin);
 void gpio_set(GPIO_TypeDef *GPIOx, uint8_t pin);

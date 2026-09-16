@@ -1,5 +1,6 @@
 //Board specific information matter
 #include "bsp_led.h"
+#include "GPIO/gpio.h"
 //このボードで実行するので、ボード特定の定義を使っている。
 //別のボードの場合、定義を変えるだけで使用できる。
 #define	LED_PORT	GPIOA

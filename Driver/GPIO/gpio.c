@@ -14,21 +14,21 @@
 #define BSRR_PIN_L		(1U << (pin + 16))
 #define ODR_PIN_H		(1U << pin)
 
-static void gpio_clock_enable(GPIO_TypeDef *GPIOx)
+void gpio_clock_enable(GPIO_TypeDef *GPIOx)
 {
 	if(GPIOx == GPIOA)
 	{
 		RCC->AHB1ENR	|=	GPIOAEN;
 	}
-	if(GPIOx == GPIOB)
+	else if(GPIOx == GPIOB)
 	{
 		RCC->AHB1ENR	|=	GPIOBEN;
 	}
-	if(GPIOx == GPIOC)
+	else if(GPIOx == GPIOC)
 	{
 		RCC->AHB1ENR	|=	GPIOCEN;
 	}
-	if(GPIOx == GPIOD)
+	else if(GPIOx == GPIOD)
 	{
 		RCC->AHB1ENR	|=	GPIODEN;
 	}
@@ -44,12 +44,12 @@ void gpio_init_output(GPIO_TypeDef *GPIOx, uint8_t pin)
 
 void gpio_set(GPIO_TypeDef *GPIOx, uint8_t pin)
 {
-	GPIOx->BSRR		|=	BSRR_PIN_H;
+	GPIOx->BSRR		=	BSRR_PIN_H;		//BSRRは、＝で。
 }
 
 void gpio_reset(GPIO_TypeDef *GPIOx, uint8_t pin)
 {
-	GPIOx->BSRR		|=	BSRR_PIN_L;
+	GPIOx->BSRR		=	BSRR_PIN_L;
 }
 
 void gpio_write(GPIO_TypeDef *GPIOx, uint8_t pin, gpio_pin_state_t state)

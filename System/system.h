@@ -1,5 +1,5 @@
-#ifndef __SYSTEM_H__
-#define __SYSTEM_H__
+#ifndef SYSTEM_H
+#define SYSTEM_H
 
 #include "stm32f4xx.h"
 #include <stdint.h>
