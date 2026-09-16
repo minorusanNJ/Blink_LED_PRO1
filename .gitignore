@@ -1,0 +1,10 @@
+# Build output
+Debug/
+Release/
+
+# IDE temporary files
+*.launch
+
+# OS files
+.DS_Store
+Thumbs.db
