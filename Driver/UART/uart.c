@@ -11,7 +11,7 @@
 //UART
 #define CR1_UE			(1U << 13)
 #define CR1_TE			(1U << 3)
-#define APB1_CLK		16000000U
+#define APB1_CLK		50000000U	//half of 100M
 #define TERMBAUD		115200U
 //UART SR
 #define SR_TXE			(1U << 7)

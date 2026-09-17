@@ -3,8 +3,10 @@
 
 #include "stm32f4xx.h"
 #include <stdint.h>
+#include "data.h"
 
 void system_init(void);
-void system_delay(volatile uint32_t count);
+void systick_1ms_timer_init(void);
+void systick_ms_delay(uint32_t count);
 
 #endif
